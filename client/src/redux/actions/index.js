@@ -14,7 +14,7 @@ export const DELETE_POKEMON_BY_ID = "DELETE_POKEMON_BY_ID";
 export const getAllPokemons = () => {
   return function (dispatch) {
     try {
-      axios("https://the-amazing-pokeword.herokuapp.com/pokemons", {}).then(
+      axios("https://pokemonback-production.up.railway.app/pokemons", {}).then(
         (response) => {
           return dispatch({ type: GET_ALL_P0KEMONS, payload: response.data });
         }
