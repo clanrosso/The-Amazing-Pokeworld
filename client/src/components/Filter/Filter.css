@@ -23,3 +23,13 @@
   border-radius: 8px;
   border: 1px solid #322f22;
 }
+
+@media only screen and (min-width: 150px) and (max-width: 860px) {
+  .filter {
+    margin: 5px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
