@@ -14,7 +14,7 @@ export const DELETE_POKEMON_BY_ID = "DELETE_POKEMON_BY_ID";
 export const getAllPokemons = () => {
   return function (dispatch) {
     try {
-      axios("https://pokemonback-production.up.railway.app/pokemons", {}).then(
+      axios("https://theamazingpokeword.onrender.com/pokemons", {}).then(
         (response) => {
           return dispatch({ type: GET_ALL_P0KEMONS, payload: response.data });
         }
@@ -30,7 +30,7 @@ export const getPokemonByName = (name) => {
   return function (dispatch) {
     try {
       axios(
-        "https://pokemonback-production.up.railway.app/pokemons?name=" + name,
+        "https://theamazingpokeword.onrender.com/pokemons?name=" + name,
         {}
       ).then((response) => {
         return dispatch({
@@ -49,7 +49,7 @@ export const getPokemonById = (id) => {
   return async function (dispatch) {
     try {
       let response = await axios(
-        "https://pokemonback-production.up.railway.app/pokemons/" + id,
+        "https://theamazingpokeword.onrender.com/pokemons/" + id,
         {}
       );
       return dispatch({
@@ -82,7 +82,7 @@ export const filterCreated = (payload) => {
 export const getAllTypes = () => {
   return function (dispatch) {
     try {
-      axios("https://pokemonback-production.up.railway.app/types", {}).then(
+      axios("https://theamazingpokeword.onrender.com/types", {}).then(
         (response) => {
           return dispatch({ type: GET_ALL_TYPES, payload: response.data });
         }
@@ -106,7 +106,7 @@ export const createPokemon = (payload) => {
   return function (dispatch) {
     try {
       axios
-        .post("https://pokemonback-production.up.railway.app/pokemons", payload)
+        .post("https://theamazingpokeword.onrender.com/pokemons", payload)
         .then((response) => {
           return dispatch({
             type: CREATE_POKEMON,
@@ -124,7 +124,7 @@ export const deletePokemonById = (id) => {
   return async function (dispatch) {
     try {
       let response = await axios.delete(
-        "https://pokemonback-production.up.railway.app/delete/" + id,
+        "https://theamazingpokeword.onrender.com/delete/" + id,
         {}
       );
       return dispatch({
